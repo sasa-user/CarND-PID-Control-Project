@@ -3,6 +3,24 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## PID controller
+
+A PID (proportional–integral–derivative) controller is a controller used in automation to control an output and bring a process value to the desired set point.
+
+The PID controller does this by monitoring a specific input (the process value), calculating how far away it is from the set point, and using this information to calculate the output.
+
+- **Proportional gain**: The purpose of the proportional, is to have a large immediate reaction on the output to bring the process value close to the set point. As the error becomes less, the influence of the proportional value on the output becomes less.
+
+- **Integral gain**: The purpose of the integral, is to increases action in relation not only to the error but also the time for which it has persisted. The integral will normally not have as much immediate influence on the output as the proportional, but because the integral is continuously accumulating overtime, the longer it takes for the process value to reach the set point, the more effect the integral will have on the output.
+
+- **Derivative gain**: The purpose of the derivative is to “predict” where the process value is going, and bias the output in the opposite direction of the proportional and integral, to hopefully prevent the controller from over-shooting the set point if the ramp rate is to fast.
+
+Hyperparameters (P, I, D coefficients) for this project are choosen manually. Lessons coefficients were great starting point.
+
+Preview of the pid controller:
+
+![Alt Text](pid.gif)
+
 ## Dependencies
 
 * cmake >= 3.5
